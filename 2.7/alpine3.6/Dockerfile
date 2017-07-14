@@ -1,4 +1,4 @@
-FROM hicloudcmp/alpine-base:3.6
+FROM cmp1234/alpine-base:3.6
 
 # ensure local python is preferred over distribution python
 ENV PATH /usr/local/bin:$PATH
