@@ -14,6 +14,8 @@ RUN apk add --no-cache ca-certificates
 ENV GPG_KEY C01E1CAD5EA2C4F0B8E3571504C367C218ADD4FF
 ENV PYTHON_VERSION 2.7.13
 
+RUN adduser -u 18345 -D cmp
+
 RUN set -ex \
 	&& apk add --no-cache --virtual .fetch-deps \
 		gnupg \
@@ -106,4 +108,5 @@ RUN set -ex; \
 		\) -exec rm -rf '{}' +; \
 	rm -f get-pip.py
 
+WORKDIR /home/cmp
 CMD ["python2"]
