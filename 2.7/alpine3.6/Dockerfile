@@ -1,4 +1,5 @@
-FROM cmp1234/alpine-bash
+FROM alpine:3.6
+#FROM cmp1234/alpine-bash
 
 # ensure local python is preferred over distribution python
 ENV PATH /usr/local/bin:$PATH
